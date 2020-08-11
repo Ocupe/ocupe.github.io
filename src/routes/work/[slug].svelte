@@ -17,26 +17,50 @@
     export let data;
 </script>
 
-<img src={data.keyImage.src} alt="{data.keyImage.alt}/" />
-
-<h1>{data.title}</h1>
+<div>
+    <img src={data.keyImage.src} alt="{data.keyImage.alt}/" />
+    <article>
+        <h1>{data.title}</h1>
+        <p>{data.text}</p>
+    </article>
+</div>
 
 <style>
-    div {
+    article {
+        grid-area: text;
+        padding-top: var(--normal);
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+        /* padding: 1.2em; */
+    }
+
+    /* div {
         display: flex;
         width: 100%;
         flex-direction: column;
-    }
+    } */
     img {
         /* position: absolute;
         top: 0px;
         left: 0px; */
-        width: 100%;
+        grid-area: img;
+        max-width: 100%;
+        /* min-width: 0; */
     }
-    h1 {
-        position: absolute;
-        top: 200px;
-        left: 30px;
-        width: 300px;
+    /* h1 {
+        grid-area: title;
+    } */
+    /* p {
+        grid-area: text;
+    } */
+    div {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% auto;
+        grid-template-areas:
+            "img"
+            "text";
+        /* width: 100%;
+        height: 100px; */
     }
 </style>

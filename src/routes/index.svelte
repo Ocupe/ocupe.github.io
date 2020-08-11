@@ -21,7 +21,7 @@
             C1,0.982,0.986,1,0.969,1 H0.031 C0.014,1,0,0.982,0,0.96" />
     </clipPath>
 </svg>
-<svg class="svg">
+<svg>
     <clipPath id="clip-stroke" clipPathUnits="objectBoundingBox">
         <path
             d="M0.014,0.003 S0.017,0.018,0.016,0.023 C0.016,0.027,0.013,0.025,0.013,0.031
@@ -154,7 +154,6 @@
             C0.038,0,0.014,0.003,0.014,0.003" />
     </clipPath>
 </svg>
-<!-- <img src="storke.svg" alt="Brush stroke" /> -->
 
 <style>
     svg {
@@ -162,5 +161,6 @@
         height: 0px;
     }
     div {
+        padding: 1.2em;
     }
 </style>

@@ -3,10 +3,10 @@
 </script>
 
 <div class="container">
-    <div class="card2" />
-    <div class="card1" />
-    <a href={`work/${data.slug}`}>
-        <img src={data.keyImage.src} alt={data.keyImage.alt} />
+    <!-- <div class="card2" />
+    <div class="card1" /> -->
+    <a rel="prefetch" href={`work/${data.slug}`}>
+        <img src={data.keyImage.src} alt={data.keyImage.alt} loading="lazy" />
         <h1>{data.title}</h1>
     </a>
 </div>
@@ -52,6 +52,7 @@
         padding-top: var(--xxSmall);
         padding-bottom: var(--xxSmall);
         clip-path: url(#clip-stroke);
+        min-width: 28%;
     }
     img {
         position: absolute;
