@@ -14,29 +14,52 @@
 </script>
 
 <script>
+    import { Swipe, SwipeItem } from "svelte-swipe"; // gzipped 3.37 KB
     export let data;
+
+    let autoplay = false;
+    let delay = 2000; //ms
+    let showIndicators = true;
+    let transitionDuration = 1000; //ms
+    let defaultIndex = 0; //start from 0
 </script>
 
-<img src={data.keyImage.src} alt="{data.keyImage.alt}/" />
+<div class="swipe-holder">
+    <Swipe {showIndicators} {autoplay} {delay} {transitionDuration} {defaultIndex}>
+        <SwipeItem>
+            <img src={data.keyImage.src} alt={data.keyImage.alt} />
+        </SwipeItem>
+        <SwipeItem>
+            <img src="dummy/img2.jpg" alt={data.keyImage.alt} />
+        </SwipeItem>
+        <SwipeItem>
+            <img src="dummy/img3.jpg" alt={data.keyImage.alt} />
+        </SwipeItem>
+    </Swipe>
+</div>
 
-<h1>{data.title}</h1>
+<!-- <img src={data.keyImage.src} alt="{data.keyImage.alt}/" />
+
+<h1>{data.title}</h1> -->
 
 <style>
-    div {
+    .swipe-holder {
+        height: 30vh;
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* div {
         display: flex;
         width: 100%;
         flex-direction: column;
-    }
-    img {
-        /* position: absolute;
-        top: 0px;
-        left: 0px; */
-        width: 100%;
     }
     h1 {
         position: absolute;
         top: 200px;
         left: 30px;
         width: 300px;
-    }
+    } */
 </style>
