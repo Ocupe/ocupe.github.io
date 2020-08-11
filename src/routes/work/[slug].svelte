@@ -28,9 +28,9 @@
 <style>
     article {
         grid-area: text;
-        padding-top: var(--normal);
-        padding-left: 1.2em;
-        padding-right: 1.2em;
+        padding-top: var(--m);
+        padding-left: var(--s);
+        padding-right: var(--s);
         /* padding: 1.2em; */
     }
 
@@ -56,10 +56,11 @@
     div {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 30% auto;
+        grid-template-rows: 30% auto auto;
         grid-template-areas:
             "img"
-            "text";
+            "text"
+            "slider";
         /* width: 100%;
         height: 100px; */
     }

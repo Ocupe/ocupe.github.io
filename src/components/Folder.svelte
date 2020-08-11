@@ -43,8 +43,8 @@
         /* background-image: url("stroke.svg");
     background-size: contain; */
         position: absolute;
-        left: var(--small);
-        bottom: var(--small);
+        left: var(--xs);
+        bottom: var(--xs);
         margin: 0px;
         background-color: white;
         padding-left: var(--small);

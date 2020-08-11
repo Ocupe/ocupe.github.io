@@ -6,6 +6,13 @@
   --normal: 32px;
   --large: 64px;
   --xLarge: 128px;
+
+  --xxs: 0.4em;
+  --xs: 0.8em;
+  --s: 1.6em;
+  --m: 3.2em;
+  --l: 6.4em;
+  --xl: 12.8em;
 }
 
 body {
