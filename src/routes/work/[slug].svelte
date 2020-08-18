@@ -26,38 +26,6 @@
 </div>
 
 <style>
-  article {
-    grid-area: text;
-    padding-top: var(--m);
-    padding-left: var(--s);
-    padding-right: var(--s);
-    /* padding: 1.2em; */
-  }
-
-  /* div {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-    } */
-  img {
-    grid-area: img;
-    width: 100vw;
-    height: 30vh;
-    object-fit: cover;
-    padding-left: -var(--xs);
-    /* align-self: center; */
-    place-self: center;
-    /* max-width: 100vw;
-    padding: -10%; */
-
-    /* min-width: 0; */
-  }
-  /* h1 {
-        grid-area: title;
-    } */
-  /* p {
-        grid-area: text;
-    } */
   div {
     display: grid;
     grid-template-columns: 100%;
@@ -66,9 +34,20 @@
       "img"
       "text"
       "slider";
-
     grid-gap: var(--s);
-    /* width: 100%;
-        height: 100px; */
+  }
+  article {
+    grid-area: text;
+    padding-top: var(--m);
+    padding-left: var(--s);
+    padding-right: var(--s);
+  }
+  img {
+    grid-area: img;
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+    padding-left: -var(--xs);
+    place-self: center;
   }
 </style>
