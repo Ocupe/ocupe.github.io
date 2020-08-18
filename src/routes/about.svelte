@@ -1,7 +1,8 @@
 <svelte:head>
-	<title>About</title>
+  <title>About | Jonas Schell</title>
 </svelte:head>
+<div class="page">
+  <h1>About this site</h1>
 
-<h1>About this site</h1>
-
-<p>This is the 'about' page. There's not much here.</p>
+  <p>This is the 'about' page. There's not much here.</p>
+</div>
