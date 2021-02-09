@@ -24,7 +24,6 @@
   import Folder from "../../components/Folder.svelte";
   import { fade } from "svelte/transition";
   export let works;
-  console.log("works", works);
 </script>
 
 <svelte:head>
@@ -37,9 +36,7 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
   <Folder data={work} />
-  <!-- <li>
-      <a rel="prefetch" href="work/{work.title}">{work.title}</a>
-    </li> -->
+
 {/each}
 
 <style>
