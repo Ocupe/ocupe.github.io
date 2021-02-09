@@ -18,7 +18,7 @@
     width: 100%;
     max-width: 35em;
     background-color: white;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     box-sizing: border-box;
   }
 
@@ -27,6 +27,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
+    max-width: 600px;
     padding-left: var(--xs);
     padding-right: var(--xs);
     box-sizing: border-box;
