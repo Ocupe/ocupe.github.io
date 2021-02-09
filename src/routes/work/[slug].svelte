@@ -1,27 +1,38 @@
 <script context="module">
-  export async function preload({ params, query }) {
+  export function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await this.fetch(`work/${params.slug}.json`);
-    const data = await res.json();
-
-    if (res.status === 200) {
-      return { data: data };
-    } else {
-      this.error(res.status, data.message);
-    }
+    return this.fetch("https://cms.jonasschell.de/api/collections/get/projects", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        // filter: { published: true,  },
+        filter: { published: true, title_slug: params.slug },
+        // fields: { title: true, images: true },
+        // limit: 10,
+        // skip: 5,
+        // sort: { year: -1 },
+        // populate: 1, // resolve linked collection items
+        // lang: "de", // return normalized language fields (fieldA_de => fieldA)
+      }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        return { data: data.entries[0], slug: params.slug };
+      });
   }
 </script>
 
 <script>
   export let data;
+  console.log("data", data);
 </script>
 
 <div>
-  <img src={data.keyImage.src} alt="{data.keyImage.alt}/" />
+  <img src={"https://cms.jonasschell.de" + data.images[0].path} alt="" />
   <article>
     <h1>{data.title}</h1>
-    <p>{data.text}</p>
+    {@html data.description}
   </article>
 </div>
 
