@@ -9,7 +9,7 @@
         // filter: { published: true,  },
         filter: { published: true, title_slug: params.slug },
         // fields: { title: true, images: true },
-        // limit: 10,
+        limit: 1,
         // skip: 5,
         // sort: { year: -1 },
         // populate: 1, // resolve linked collection items
@@ -33,6 +33,9 @@
   <article>
     <h1>{data.title}</h1>
     {@html data.description}
+    {#each data.images as { path, title }}
+      <img src={"https://cms.jonasschell.de" + path} alt={title} />
+    {/each}
   </article>
 </div>
 
