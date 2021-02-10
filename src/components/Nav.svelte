@@ -5,7 +5,7 @@
 <nav>
   <ul>
     <li>
-      <a aria-current={segment === undefined ? "page" : undefined} href="work">works</a>
+      <a aria-current={segment === "work" ? "page" : undefined} href="work">works</a>
     </li>
     <li>
       <a aria-current={segment === "about" ? "page" : undefined} href="about">about</a>
